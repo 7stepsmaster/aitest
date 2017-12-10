@@ -1,37 +1,102 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dialog Effects | Sally</title>
+		<meta name="description" content="A Collection of Dialog Effects" />
+		<meta name="keywords" content="dialog, effect, modal, overlay, animation, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<!-- common styles -->
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<!-- individual effect -->
+		<link rel="stylesheet" type="text/css" href="css/dialog-sally.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<header class="codrops-header">
+					<h1><span>A collection of</span> Dialog Effects</h1>
+					<div class="codrops-links">
+						<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/MockupSlideshow/" title="Previous Demo"><span>Previous Demo</span></a> /
+						<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=21386" title="Back to the article"><span>Back to the Codrops Article</span></a>
+					</div>
+					<div class="button-wrap"><button data-dialog="somedialog" class="trigger">Open Dialog</button></div>
+				</header>
+				<nav id="menu" class="menu">
+					<div>
+						<h2>Simple</h2>
+						<ul>
+							<li><a href="index.html">Sandra</a></li>
+							<li><a class="current-demo" href="sally.html">Sally</a></li>
+						</ul>
+						<h2>Body</h2>
+						<ul>
+							<li><a href="dean.html">Dean</a></li>
+							<li><a href="susan.html">Susan</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Move/Slide</h2>
+						<ul>
+							<li><a href="cathy.html">Cathy</a></li>
+							<li><a href="annie.html">Annie</a></li>
+							<li><a href="val.html">Val</a></li>
+							<li><a href="ricky.html">Ricky</a></li>
+							<li><a href="donna.html">Donna</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Sticky</h2>
+						<ul>
+							<li><a href="ken.html">Ken</a></li>
+							<li><a href="alex.html">Alex</a></li>
+						</ul>
+						<h2>Jelly</h2>
+						<ul>
+							<li><a href="don.html">Don</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>SVG</h2>
+						<ul>
+							<li><a href="laura.html">Laura</a></li>
+							<li><a href="jamie.html">Jamie</a></li>
+							<li><a href="henry.html">Henry</a></li>
+							<li><a href="jim.html">Jim</a></li>
+							<li><a href="wilma.html">Wilma</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div id="somedialog" class="dialog">
+					<div class="dialog__overlay"></div>
+					<div class="dialog__content">
+						<h2><strong>Howdy</strong>, I'm a dialog box</h2><div><button class="action" data-dialog-close>Close</button></div>
+					</div>
+				</div>
+				<!-- Related demos -->
+				<section class="related">
+					You might also like: <a href="http://tympanus.net/Development/FullscreenOverlayStyles/">Fullscreen Overlay Effects</a> and <a href="http://tympanus.net/Development/ModalWindowEffects/">Nifty Modal Window Effects</a>
+				</section>
+			</div><!-- /content -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/dialogFx.js"></script>
+		<script>
+			(function() {
 
-You can use the [editor on GitHub](https://github.com/7stepsmaster/aitest/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+				var dlgtrigger = document.querySelector( '[data-dialog]' ),
+					somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+					dlg = new DialogFx( somedialog );
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/7stepsmaster/aitest/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+			})();
+		</script>
+	</body>
+</html>
